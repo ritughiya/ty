@@ -1,0 +1,429 @@
+html{
+margin:0;
+padding: 0;
+font-family: Arial;
+font-size: 20px;
+font-style: normal;
+background-color: #ececec;
+}
+body{
+margin: 0 10px;
+overflow-x:hidden;
+}
+ul{
+list-style: none;
+padding: 0;
+margin:0;
+}
+a{
+text-decoration: none;
+color:#000;
+}
+p{
+font-family: serif;
+margin: 0;
+}
+/* Taeyoon Choi name */
+.logo{
+	width:100%;
+	text-align:left !important;
+}
+/* nav styles */
+.flex{
+display: flex;
+justify-content: space-between;
+}
+nav{
+text-align: right;
+width:100%;
+}
+.home header a,
+.home footer a{
+color: #000;
+}
+h1 a:hover{
+	text-decoration:underline;
+	transition: text-decoration 0.1s;
+}
+
+.underline-hover:hover{
+	text-decoration:underline;
+	transition: text-decoration 0.1s;
+}
+
+.current{
+	text-decoration:underline;
+	  text-underline-offset: 1em;
+
+/*		border-bottom: 1px solid;
+	transition: border-bottom 0.1s;*/
+}
+
+/* poem styles */
+.tab{
+margin-left: 5vw;
+}
+.tab2{
+margin-left: 10vw;
+}
+/* text styles */
+.hidden{
+	opacity: 0;
+}
+.no-click{
+	pointer-events:none;
+}
+h1{
+font-size: 1em;
+font-style:normal;
+font-weight: normal;
+margin: 0;
+}
+h2 a{
+border-bottom: 1px solid #000;
+transition: border-bottom 0.1s;
+}
+h2 a:hover{
+border-bottom: 1px solid transparent;
+}
+h3{
+font-weight: normal;
+font-size: 0.9em;
+line-height: 1.25;
+}
+h3 a{
+text-decoration:underline;
+font-family: serif;
+font-style: italic;
+font-size: 1.1em;
+transition: border-bottom 0.1s;
+}
+h3 a:hover{
+text-decoration:none;
+}
+p a{
+border-bottom: 1px solid #000;
+font-style: italic;
+text-align: right;
+color: #000;
+transition: border-bottom 0.1s;
+}
+p a:hover{
+border-bottom: 1px solid transparent;
+}
+.current,
+.home header nav a,
+.home footer a,
+.about header nav a{
+transition: all 0.1s;
+}
+
+.mobile{
+display:none;
+}
+.painting-nav{
+	width:7.5vw;
+	margin-top:1vh;
+}
+.painting-nav:hover{
+filter: brightness(0%);
+}
+.about,
+.about header a,
+.about footer a{
+color: #000;
+}
+
+.next, .previous{
+font-size: 1em;
+}
+.painting-title{
+	width:60%;
+	margin:auto;
+}
+.top-padding-index{
+margin-top: 7.5vh;
+}
+
+.top-padding-about{
+margin-top: 10vh;
+}
+/*footer styles */
+.top-footer{
+}
+.next{
+}
+.previous{
+}
+.sticky-header{
+width:98vw;
+position: fixed;
+top:10px;
+z-index:100;
+}
+.sticky-footer{
+width:98vw;
+margin-left: auto;
+position: fixed;
+bottom:10px;
+z-index:100;
+text-align: right;
+font-size: 1em;
+align-items:flex-end;
+}
+.credits a:hover{
+	text-decoration:underline;
+	transition: text-decoration 0.1s;
+}
+/* index page */
+.painting{
+margin-bottom: 5vh;
+width: 35vw;
+margin: auto;
+transition: transform 0.2s;
+transform: translateX(0);
+box-shadow: 5px 5px 14px 1px grey;
+transition: box-shadow .25s ease;
+}
+.painting:hover{
+box-shadow: 1px 1px 15px 1px grey;
+}
+.painting img{
+width: 100%;
+}
+.horizontal{
+width: 35vw;
+}
+.poem{
+border: 1px solid;
+line-height: 1.15em;
+width: 35vw;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 15vh;
+margin-top:5vh;
+}
+.painting-title{
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+/* poem copy text styles */
+.poem, .painting-title{
+font-family: serif;
+}
+.poem h1{
+font-weight: bold;
+font-style: italic;
+padding-bottom: 2.5vh;
+font-size: 1em;
+}
+.poem h2{
+text-align: right;
+font-weight: normal;
+font-style: italic;
+padding-bottom: 5vh;
+font-size: 1em;
+}
+.poem h3,
+.poem h4,
+.poem h5{
+font-weight: normal;
+font-size: 1em;
+}
+.poem-copy{
+margin: 3% ;
+text-align: justify;
+}
+.more{
+margin-top: 3vh;
+padding-left: 88%;
+font-weight: bold;
+}
+/*all paintings pg */
+.image-grid{
+/*	overflow:auto;
+*/	display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+width: 90vw;
+margin-left: 2.5vw;
+margin-right: 2.5vw;
+margin-top: 3vh;
+}
+
+.small{
+height: 65vh;
+padding: 5vh 1vw;
+width: auto;
+}
+.small-horizontal{
+	max-width:70vw;
+	max-height:65vh;
+	width:auto;
+	height:auto;
+}
+/* detail pages */
+.alldetail{
+height: 96vh;
+display:flex;
+flex-direction: column;
+justify-content: space-between;
+overflow-x:hidden;
+}
+.image-container{
+display:flex;
+flex-direction: column;
+margin: auto;
+}
+
+.video-container{
+	margin-top: auto;
+margin-bottom:auto;
+margin-left: auto;
+margin-right:auto;
+}
+.video-container iframe{
+width: 85vw;
+height: 80vh;
+}
+
+.painting-container{
+margin-top: auto;
+margin-bottom:auto;
+margin-left: auto;
+margin-right:auto;
+max-width: 96vw;
+max-height: 83vh;
+}
+.horizontal-detail{
+	width: 60vw;
+}
+.item{
+}
+/* poem detail page styles */
+.poem-content{
+font-family: serif;
+max-width: 45vw;
+margin-bottom:10vh;
+margin-left: auto;
+margin-right: auto;
+position:absolute;
+margin-top:7.5vh;
+top: 0;
+bottom: 5vh;
+left: 0;
+right: 0;
+}
+.poem-content h1{
+font-size: 1em;
+font-weight: bold;
+}
+.poem-content h2{
+font-size: 1em;
+font-weight: normal;
+text-align: right;
+font-style: italic;
+}
+.poem h3,
+.poem h4,
+.poem h5,
+.poem-content h3,
+.poem-content h4,
+.poem-content h5{
+font-size: 1em;
+margin: 0;
+font-weight: normal;
+line-height: 1.15;
+}
+.poem h4,
+.poem-content h4{
+margin-left: 5vw;
+}
+.poem h5,
+.poem-content h5{
+margin-left: 10vw;
+}
+.poem-content img{
+width:100%;
+}
+.poem-content iframe{
+width:100%;
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+.top-padding-index{
+}
+
+.painting, .poem, .horizontal{
+width: 35vw;
+}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+body{
+font-size: 18px;
+}
+.sticky-header,
+.sticky-footer{
+	width: 96vw;
+}
+/*index page */
+.painting, .poem, .horizontal{
+width: 80vw;
+}
+.painting{
+position: relative;
+}
+.top-padding-index{
+margin-top: 7.5vh;
+}
+
+.top-padding-poem{
+	margin-top: 10vh;
+}
+
+/*detail page */
+.painting-container{
+margin: auto;
+margin-left: auto;
+margin-right:auto;
+}
+
+.video-container iframe{
+width: 95vw;
+height: 40vh;
+}
+
+.painting-detail-container{
+}
+.painting-detail-title{
+	font-size:3em;
+}
+.poem-content{
+position: static;
+margin-top: 0%;
+max-width: 96vw;
+}
+
+.horizontal-detail{
+	width: 96vw;
+}
+
+/* nav styles */
+.desktop{
+display:none;
+}
+.mobile{
+display: flex;
+width: 96vw;
+}
+.top-padding{
+	margin-top: 0;
+}
+}

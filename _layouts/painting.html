@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-ca"  id="html">
+<head>
+	<meta charset="utf-8">
+	<title>Taeyoon Choi</title>
+	<link href="{{site.baseurl}}/css/normalize.css" rel="stylesheet">
+	<link href="{{site.baseurl}}/css/common.css" rel="stylesheet">
+			<link rel='shortcut icon' type='image/x-icon' href= '{{site.baseurl}}/img/favicon.ico' />
+		<script src="{{site.baseurl}}/js/randombgcolor.js"></script>
+</head>
+
+<body class="alldetail">
+
+<header class="sticky-header">
+	{% include painting-poem-nav.html %}
+</header>
+
+	<img class="painting-container painting-detail-container {% if page.orientation == 'horizontal'%}horizontal-detail{%endif%}" src="{{site.baseurl}}/img/{{page.image}}" alt="{{page.alt-text}}">
+
+{% include painting-detail-footer.html %}
+
+</body>
+</html>

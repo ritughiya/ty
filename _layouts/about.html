@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-ca"  id="html">
+<head>
+	<meta charset="utf-8">
+	<title>Taeyoon Choi</title>
+	<link href="{{site.baseurl}}/css/normalize.css" rel="stylesheet">
+	<link href="{{site.baseurl}}/css/common.css" rel="stylesheet">
+			<link rel='shortcut icon' type='image/x-icon' href= '{{site.baseurl}}/img/favicon.ico' />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="{{site.baseurl}}/js/randombgcolor.js"></script>
+
+</head>
+
+<body class="about">
+
+<header class="flex sticky-header">
+	{% include nav.html %}
+</header>
+<div class="top-padding-about"></div>
+{{content}}
+
+<footer class="sticky-footer credits">
+	<a href="{{site.url}}/about/" {% if page.url == '/about/' %}class="current"{% endif %}>About</a>
+</footer>
+
+
+
+</body>
+</html>

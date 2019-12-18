@@ -1,0 +1,75 @@
+{% for c in site.paintingspoems %}
+{% if c.title == page.title %}
+  {% assign thisPost = c %}
+  {% if forloop.index == 1 %}
+    {% assign prevflag = 0 %}
+    {% assign nextflag = 1 %}
+  {% elsif forloop.index == forloop.length %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 0 %}
+  {% else %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 1 %}
+  {% endif %}  
+{% endif %}
+{% endfor %}
+
+{% for c in site.paintingspoems %}
+  {% if c.title == page.title %}
+    {% assign prevflag = 0 %}
+  {% endif %}
+  {% if prevflag == 1 %}
+    {% assign prevPost = c %}
+    {% assign page.previous = c %}
+  {% endif %}
+{% endfor %}
+
+{% if nextflag == 1 %}
+  {% for c in site.paintingspoems %}
+    {% if foundPost == 1 %}
+      {% assign getNext = 1 %}
+    {% endif %}
+    {% if c.title == page.title %}
+      {% assign foundPost = 1 %}        
+    {% endif %}
+    {% if getNext == 1%}
+      {% assign nextPost = c %}
+      {% assign page.next = c %}
+      {% assign foundPost = 0 %}
+      {% assign getNext = 0 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<ul class="sticky-footer pager flex">    
+        {% if nextPost.url %}
+        <li class="prev">
+        	<a href="{{nextPost.painting-path}}">
+            <span>Prev</span>
+        </a>
+        </li> 
+        {% else %}
+        <li class="prev hidden no-click">
+          <a href="{{nextPost.painting-path}}">
+            <span>Prev</span>
+        </a>
+        </li> 
+        {% endif %} 
+        <li class="painting-title">
+        	{{page.title}}
+        </li>
+        {% if prevPost.url %} 
+        <li class="next">
+        	<a href="{{prevPost.painting-path}}">
+            <span>Next</span>
+                    </a>
+        </li> 
+        {% else %}
+        <li class="next hidden no-click">
+          <a href="{{prevPost.painting-path}}">
+            <span>Next</span>
+        </a>
+        </li> 
+        {% endif %} 
+
+</ul>

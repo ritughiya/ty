@@ -1,0 +1,38 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+
+<!-- <div id="splashscreen">
+	<img src="{{site.baseurl}}/img/preview.png">
+</div> -->
+
+<div class="image-grid">
+<ul class="top-padding">
+{% assign sorted2 = site.paintingspoems | sort: 'date' | reverse %}
+{% for paintingpoem in sorted2 %}
+<li>
+			<div class="image-container">
+      <a
+        class="painting item {% if paintingpoem.orientation == 'horizontal'%}horizontal{%endif%}"
+        href="{{site.baseurl}}{{paintingpoem.painting-path}}"
+      >
+				<img src="{{site.baseurl}}/img/{{paintingpoem.image}}" alt="{{paintingpoem.alt-text}}">
+			</a>
+			<div class="poem item">
+				<a href="{{site.baseurl}}{{paintingpoem.poem-path}}">
+			<div class="poem-copy" markdown="1">
+{{paintingpoem.excerpt}}
+
+				<br>
+				<a class="more" href="{{site.baseurl}}{{paintingpoem.poem-path}}">. . .</a>
+			</div>
+			</a>
+			</div>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
+</div>

@@ -1,0 +1,41 @@
+
+title: Taeyoon Choi / Paintings + Poems
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Taeyoon Choi / Paintings + Poems
+baseurl: "" 
+url: "" 
+twitter_username: jekyllrb
+github_username:  jekyll
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+kramdown:
+  parse_block_html: true
+permalink: pretty
+collections:
+  archive:
+    output: true
+    permalink: "/:path/"
+  paintingspoems:
+    output: true
+    permalink: "/:collection/:path/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "paintings"
+    values:
+      layout: "painting"
+
+  # classes:
+  #   output: true
+  #   permalink: /classes/:path/
+  # faqs:
+  #   output: false
+
+# pages:
+  # permalink: /:title/
