@@ -45,13 +45,13 @@
 <ul class="sticky-footer pager flex">    
         {% if nextPost.url %}
         <li class="prev">
-        	<a href="{{nextPost.url}}">
+        	<a href="{{nextPost.baseurl}}">
             <span>Prev</span>
         </a>
         </li> 
         {% else %}
         <li class="prev hidden no-click">
-          <a href="{{nextPost.url}}">
+          <a href="{{nextPost.baseurl}}">
             <span>Prev</span>
         </a>
         </li> 
@@ -61,13 +61,13 @@
         </li>
         {% if prevPost.url %} 
         <li class="next">
-        	<a href="{{prevPost.url}}">
+        	<a href="{{prevPost.baseurl}}">
             <span>Next</span>
                     </a>
         </li> 
         {% else %}
         <li class="next hidden no-click">
-          <a href="{{prevPost.url}}">
+          <a href="{{prevPost.baseurl}}">
             <span>Next</span>
                     </a>
         </li> 
